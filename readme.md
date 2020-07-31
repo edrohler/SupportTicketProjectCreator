@@ -20,4 +20,4 @@ Note that `tix-widg` is a msalias I have set in my command prompt that navigates
 
 Assuming I have the sptc in my path, from the example above I would instead run the following:
 
-`dotnet run sptc 123 widget -n true`
+`stpc 123 widget -n true`
