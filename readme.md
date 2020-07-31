@@ -18,6 +18,6 @@ Note that `tix-widg` is a msalias I have set in my command prompt that navigates
 
 ## Usage
 
-Assuming I have the sptc in my path, from the example above I would instead run the following:
+Assuming I have the stpc in my path, from the example above I would instead run the following:
 
 `stpc 123 widget -n true`
