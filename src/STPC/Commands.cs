@@ -13,8 +13,8 @@ namespace STPC
         [CommandParameter(1, Description = "Name of Ticket Repository")]
         public string Repository { get; set; }
 
-        [CommandOption("new", 'n', Description = "New Ticket", IsRequired = true)]
-        public bool IsNew { get; set; }
+        [CommandOption("new", 'n', Description = "New Ticket")]
+        public bool IsNew { get; set; } = false;
 
         public async ValueTask ExecuteAsync(IConsole console)
         {
