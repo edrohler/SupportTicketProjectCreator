@@ -19,6 +19,7 @@ namespace STPC
         public async ValueTask ExecuteAsync(IConsole console)
         {
             /****
+            ----- Execution -----
                 1. If IsNew Then
                     1. cd to repository tickets folder
                     2. mkdir for Ticket Id
@@ -27,9 +28,11 @@ namespace STPC
                     5. mkdir ref src kb kb\img
                     6. git add -A
                     7. git commit -m init
+                    8. explorer .
                 2. Else
                     1. cd to repository tickets folder
                     2. cd ticket id
+                    3. explorer .
             ***/
 
             await console.Output.WriteLineAsync($"Create New={IsNew} {Repository} Ticket with ID {TicketId}!");
