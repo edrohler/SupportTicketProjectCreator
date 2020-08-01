@@ -1,0 +1,8 @@
+{
+  "profiles": {
+    "STPC": {
+      "commandName": "Project",
+      "commandLineArgs": "123 ajax"
+    }
+  }
+}

@@ -1,5 +1,6 @@
 using CliFx;
 using CliFx.Attributes;
+using System;
 using System.Threading.Tasks;
 
 namespace STPC
@@ -18,22 +19,39 @@ namespace STPC
 
         public async ValueTask ExecuteAsync(IConsole console)
         {
-            /****
-                ----- Execution -----
-                1. If IsNew Then
-                    1. cd to repository tickets folder
-                    2. mkdir for Ticket Id
-                    3. cd ticket id
-                    4. dotnet new sln
-                    5. mkdir ref src kb kb\img
-                    6. git add -A
-                    7. git commit -m init
-                    8. explorer .
-                2. Else
-                    1. cd to repository tickets folder
-                    2. cd ticket id
-                    3. explorer .
-            ***/
+            if (IsNew)
+            {
+                /*
+                 *  1.cd to repository tickets folder
+                 *  
+                 *  2.mkdir for Ticket Id
+                 *
+                 *  3.cd ticket id
+                 *
+                 *  4.dotnet new sln
+                 *
+                 *  5.mkdir ref src kb kb\img
+                 *
+                 *  6.git add - A
+                 *
+                 *  7.git commit - m init
+                 *
+                 *  8.explorer.
+                 *
+                 * 
+                 */
+            }
+            else
+            {
+                /*
+                 *  1. cd to repository tickets folder
+                 *  
+                 *  2. cd ticket id
+                 *
+                 */
+
+                await console.Output.WriteLineAsync($"{Environment.CurrentDirectory}");
+            }
 
             await console.Output.WriteLineAsync($"Create New={IsNew} {Repository} Ticket with ID {TicketId}!");
         }
